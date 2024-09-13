@@ -9,5 +9,5 @@ WITH sub_query AS (
          MAX(CASE WHEN occupation = "Professor" THEN name END) AS Professor,
          MAX(CASE WHEN occupation = "Singer" THEN name END) AS Singer,
          MAX(CASE WHEN occupation = "Actor" THEN name END) AS Actor
-    FROM temp
+    FROM sub_query
 GROUP BY row_num;
